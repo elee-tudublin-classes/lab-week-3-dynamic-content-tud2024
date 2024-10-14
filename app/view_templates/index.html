@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/static/js/browserTime.js"></script>
   	<!-- Load common head content, including the favicon link -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
     {% include "./partials/head.html" ignore missing with context %}
+
     <title>Home Page</title>
 </head>
 
@@ -14,20 +19,22 @@
     <!-- include navbar from partials -->
     {% include "./partials/nav.html" ignore missing with context %}
 
-    <!--<h1>Dynamic content Examples</h1>
+    <h1>Dynamic content</h1>
     <div class="timeBlock">
-      <h3>Server Time</h3>
-      <h4 id="serverTime">{{serverTime}}</h4>
-    </div>
+    <h3>Server Time:</h3>
+    <h4 id="serverTime">{{serverTime}}</h4>
+  </div>
 
-    <div class="timeBlock">
-      <h3>Brower Time:</h3>
-      <h4 id ="browserTime"></h4>
-    </div> -->
+  <div class="timeBlock">
+    <h3>Browswer Time:</h3>
+    <h4 id="browserTime"></h4>
+  </div>
 
     <!-- Load common CSS and JS -->
-    
-    {% include "./partials/dependencies.html" ignore missing with context %}
+     {% include "./partials/dependencies.html" ignore missing with context %}
+     <link rel="stylesheet" href="/static/css/style.css">
+     <script src="/static/css/style.css"></script>
+     <script src="/static/js/browserTime.js"></script>
 </body>
 
 </html>

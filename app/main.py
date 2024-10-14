@@ -37,7 +37,7 @@ templates = Jinja2Templates(directory="app/view_templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    serverTime: datetime = datetime.now().strftime("%d/%m/%y %H:%M%:%S")
+    serverTime: datetime = datetime.now().strftime("%d/%m/%y %H:%M:%S")
     return templates.TemplateResponse("index.html", {"request": request,"serverTime":serverTime})
 
     
